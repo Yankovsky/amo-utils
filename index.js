@@ -55,6 +55,7 @@ module.exports = (baseUrl, userLogin, userHash) => {
 		getContacts: () => {
 			const REQUESTED_CONTACTS_COUNT = 500
 
+			// https://www.amocrm.ru/developers/content/api/contacts
 			const getContactsRequestUrl = offset => getAmoApiUrl('/api/v2/contacts/', {
 				limit_rows: REQUESTED_CONTACTS_COUNT,
 				limit_offset: offset
@@ -66,6 +67,7 @@ module.exports = (baseUrl, userLogin, userHash) => {
 		getLeads: () => {
 			const REQUESTED_LEADS_COUNT = 500
 
+			// https://www.amocrm.ru/developers/content/api/leads
 			const getLeadsRequestUrl = offset => getAmoApiUrl('/api/v2/leads/', {
 				limit_rows: REQUESTED_LEADS_COUNT,
 				limit_offset: offset
